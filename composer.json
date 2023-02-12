@@ -1,0 +1,54 @@
+{
+    "name": "dminustin/bfc-core",
+    "description": "BFC core module",
+    "keywords": [
+        "dminustin",
+        "bfc-core"
+    ],
+    "homepage": "https://github.com/dminustin/bfc-core",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Danila Minustin",
+            "email": "danila.minustin@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.4|^8.0",
+        "illuminate/support": "^8.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^6.0",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Dminustin\\BfcCore\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dminustin\\BfcCore\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dminustin\\BfcCore\\BfcCoreServiceProvider"
+            ],
+            "aliases": {
+                "BfcCore": "Dminustin\\BfcCore\\BfcCoreFacade"
+            }
+        }
+    }
+}
