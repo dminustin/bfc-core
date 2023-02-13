@@ -2,7 +2,9 @@
 
 namespace Dminustin\BfcCore;
 
+use Illuminate\Support\Facades\Log;
+
 class BfcCore
 {
-    // Build your next great package.
+
 }
