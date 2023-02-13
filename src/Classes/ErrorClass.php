@@ -8,6 +8,13 @@ class ErrorClass
     protected int $code = 500;
     protected string $logMessage = 'Unknown Error';
 
+    public function __construct(array $data = [])
+    {
+        foreach ($data as $key=>$value) {
+            $this->$key = $value;
+        }
+    }
+
     /**
      * @return string
      */
